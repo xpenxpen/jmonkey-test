@@ -1,0 +1,104 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.xpen</groupId>
+    <artifactId>jmonkey-test</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>jmonkey-test</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jme3_v>3.1.0-stable</jme3_v>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>jcenter</id>
+            <url>http://jcenter.bintray.com</url>
+        </repository>
+    </repositories>
+    
+    <dependencies>
+
+    <dependency>
+        <groupId>org.jmonkeyengine</groupId>
+        <artifactId>jme3-core</artifactId>
+        <version>${jme3_v}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.jmonkeyengine</groupId>
+        <artifactId>jme3-desktop</artifactId>
+        <version>${jme3_v}</version>
+        <scope>runtime</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.jmonkeyengine</groupId>
+        <artifactId>jme3-lwjgl</artifactId>
+        <version>${jme3_v}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.jmonkeyengine</groupId>
+        <artifactId>jme3-effects</artifactId>
+        <version>${jme3_v}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.jmonkeyengine</groupId>
+        <artifactId>jme3-bullet</artifactId>
+        <version>${jme3_v}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.jmonkeyengine</groupId>
+        <artifactId>jme3-bullet-native</artifactId>
+        <version>${jme3_v}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.jmonkeyengine</groupId>
+        <artifactId>jme3-plugins</artifactId>
+        <version>${jme3_v}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.jmonkeyengine</groupId>
+        <artifactId>jme3-jogg</artifactId>
+        <version>${jme3_v}</version>
+    </dependency>
+    <!-- <dependency>
+        <groupId>org.jmonkeyengine</groupId>
+        <artifactId>jme3-examples</artifactId>
+        <version>${jme3_v}</version>
+        <exclusions>
+            <exclusion>
+                <artifactId>jme3-jbullet</artifactId>
+                <groupId>org.jmonkeyengine</groupId>
+            </exclusion>
+        </exclusions>
+    </dependency>-->
+        
+        <!-- TEST begin -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- TEST end -->
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <inherited>true</inherited>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
